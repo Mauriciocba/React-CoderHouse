@@ -1,0 +1,8 @@
+.contenedor{
+    width: 100%;
+    text-align: center;
+    background-color: orange;
+    color: black;
+    font-size: 40px;
+    font-family: sans-serif;
+}

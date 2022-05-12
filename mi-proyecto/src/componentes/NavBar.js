@@ -1,4 +1,5 @@
 import '../estilos-css/NavBar.css'
+import CarritoImg from './CarritoImg'
 
 function NavBar() {
     return(
@@ -8,7 +9,7 @@ function NavBar() {
            <li>Productos</li>
            <li>Contactos</li>
          </ul>
-         <img src='https://static.rfstat.com/renderforest/images/v2/logo-homepage/gradient_2.png' className="logo" alt="logo" />
+         <CarritoImg /> 
         </div>
         
     )
