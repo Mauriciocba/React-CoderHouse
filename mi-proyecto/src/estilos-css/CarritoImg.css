@@ -2,17 +2,8 @@
     display: flex;
 }
 
-
-img{
+.imagen-carrito{
     width: 50px;
     height: 50px;
-    border-radius: 10px;
-    margin-top: 13px;
-}
-
-.numero{
-    font-size: 15px;
-    color: red;
-    background-color: black;
-    border-radius: 4px;
+    margin: 13px 50px 0 0 ;
 }

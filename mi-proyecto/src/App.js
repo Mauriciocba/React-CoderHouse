@@ -1,6 +1,8 @@
 import './App.css';
 import NavBar from './componentes/NavBar';
 import Contenido from './componentes/Contenido';
+import ContadorProductos from './componentes/ContadorProductos';
+import CarritoComponente from './componentes/CarritoComponente';
 
 
 function App() {
@@ -10,9 +12,16 @@ function App() {
        <NavBar />
        <Contenido 
         titulo= 'CoderHouse'
-        subtitulo='Componentes I'
-        parrafo= 'Esta es una clase de componentes'/>
+        subtitulo='E-Commerse' />
       </header>
+      <ContadorProductos
+      titulo="Samsung 11"
+       img="./imagenes/celular1.jpg"
+      />
+      <ContadorProductos
+      titulo="Samsung 10"
+       img="./imagenes/celular2.jpg"
+      />
     </div>
   );
 }

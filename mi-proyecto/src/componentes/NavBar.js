@@ -1,4 +1,5 @@
 import '../estilos-css/NavBar.css'
+import CarritoComponente from './CarritoComponente'
 import CarritoImg from './CarritoImg'
 
 function NavBar() {
@@ -9,7 +10,7 @@ function NavBar() {
            <li>Productos</li>
            <li>Contactos</li>
          </ul>
-         <CarritoImg /> 
+         <CarritoComponente />     
         </div>
         
     )
