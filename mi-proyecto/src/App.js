@@ -3,6 +3,8 @@ import NavBar from './componentes/NavBar';
 import Contenido from './componentes/Contenido';
 import ContadorProductos from './componentes/ContadorProductos';
 import CarritoComponente from './componentes/CarritoComponente';
+import ItemContador from './componentes/ItemContador';
+
 
 
 function App() {
@@ -16,12 +18,12 @@ function App() {
       </header>
       <ContadorProductos
       titulo="Samsung 11"
-       img="./imagenes/celular1.jpg"
-      />
+      precio={60000}
+       img="./imagenes/celular1.jpg"/>
       <ContadorProductos
       titulo="Samsung 10"
-       img="./imagenes/celular2.jpg"
-      />
+      precio={50000}
+       img="./imagenes/celular2.jpg"/> 
     </div>
   );
 }

@@ -1,29 +1,36 @@
 import {useState} from 'react';
 import '../estilos-css/ContadorProductos.css'
-function ContadorProductos(props) {
+import ItemContador from './ItemContador';
+function ContadorProductos({img,titulo,stock,precio}) {
+    
     const [count, setCount] = useState(0)
-
+    
     const decrementa =()=>{
-       setCount(count-1)
+         setCount(count - 1)    
     }
 
     const incrementa =()=>{
-        setCount(count+1) 
+        setCount(count + 1) 
     }
+
 
     return(
         <div className='contenedor1'>
           <div className='card'>
-            <img className='imagen-producto' src={props.img} /> 
-            <h4>{props.titulo}</h4>
+            <img className='imagen-producto' src={img} /> 
+            <h4>{titulo}</h4>
+            <p>Precio: {precio}</p>
+            {/* <strong>Stock: {stock - count}</strong>
             <div className='contenedor-boton'>
             <button className='botton1' onClick={decrementa}>-</button>
             <h5>{count}</h5>
-            <button className='botton2' onClick={incrementa}>+</button>
-            <button>Agregar al Carrito</button>
+            <button className='botton2' onClick={incrementa}>+</button> */}
+            <ItemContador  
+            stock={5} />
+            <button>AGREGAR AL CARRITO</button>
             </div>
          </div>
-        </div>
+        
     )
     
 }
