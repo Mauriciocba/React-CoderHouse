@@ -13,6 +13,10 @@ function ContadorProductos({img,titulo,stock,precio}) {
         setCount(count + 1) 
     }
 
+    const onAdd= (inicial) =>{
+        console.log(`Se agrego al carrito ${inicial}`)
+    }
+
 
     return(
         <div className='contenedor1'>
@@ -26,8 +30,9 @@ function ContadorProductos({img,titulo,stock,precio}) {
             <h5>{count}</h5>
             <button className='botton2' onClick={incrementa}>+</button> */}
             <ItemContador  
-            stock={5} />
-            <button>AGREGAR AL CARRITO</button>
+            stock={5} 
+            numeroInicia={1}
+            onAdd={onAdd}/>
             </div>
          </div>
         

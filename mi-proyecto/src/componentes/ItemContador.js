@@ -1,9 +1,9 @@
 import {useState} from 'react';
-function ItemContador({stock}) {
-   const [inicial, setInicial] = useState(1)
+function ItemContador({stock, numeroInicia, onAdd}) {
+   const [inicial, setInicial] = useState(numeroInicia)
     
     const decrementa =()=>{
-         if(inicial > 0){
+         if(inicial > 1){
             setInicial(inicial - 1)
         }      
     }
@@ -14,12 +14,19 @@ function ItemContador({stock}) {
         } 
     }
 
+    const AgregarAlCarrito = ()=>{
+        onAdd(inicial)
+    }
+
     return(
         <div>
             <strong>Stock: {stock - inicial} </strong>
             <button  onClick={decrementa}> - </button>
             <strong>  {inicial} </strong>
             <button onClick={incrementa}> + </button>
+            <div>
+            <button onClick={AgregarAlCarrito}>SUMAR AL CARRITO</button>
+            </div>
         </div>
     )
     
