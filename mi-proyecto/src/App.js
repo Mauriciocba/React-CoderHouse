@@ -4,10 +4,21 @@ import Contenido from './componentes/Contenido';
 import ContadorProductos from './componentes/ContadorProductos';
 import CarritoComponente from './componentes/CarritoComponente';
 import ItemContador from './componentes/ItemContador';
-
-
+import ItemList from './componentes/ItemList/ItemList';
+import {useState, useEffect} from 'react'
+import {listaProductos} from '../src/Productos'
 
 function App() {
+
+  const [productos, setProductos] = useState([])
+
+  useEffect(() => {
+    listaProductos().then(respuesta =>{
+      setProductos(respuesta)
+    })
+  },[])
+
+
   return (
     <div className="App">
       <header className="App-header">
@@ -24,6 +35,8 @@ function App() {
       titulo="Samsung 10"
       precio={50000}
        img="./imagenes/celular2.jpg"/> 
+
+       <ItemList productos={productos} />
     </div>
   );
 }
