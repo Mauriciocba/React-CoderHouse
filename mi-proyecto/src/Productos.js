@@ -8,7 +8,7 @@ stock: 25,
 description:'Iphone 13'},
 
 { id: '2', 
-nombre: 'motorola g8', 
+nombre: 'Motorola g8', 
 precio: 30000, categoria: 'celular', 
 img:'https://i.blogs.es/fad653/moto-g8/840_560.jpg',
 stock: 16, 
