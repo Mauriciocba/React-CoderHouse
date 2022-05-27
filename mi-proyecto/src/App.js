@@ -6,7 +6,9 @@ import CarritoComponente from './componentes/CarritoComponente';
 import ItemContador from './componentes/ItemContador';
 import ItemList from './componentes/ItemList/ItemList';
 import {useState, useEffect} from 'react'
-import {listaProductos} from '../src/Productos'
+import {listaProductos,productoId} from '../src/Productos'
+import ItemDetail from '../src/componentes/ItemDetail/ItemDetail'
+import ItemDetailConteiner from './componentes/ItemDetailConteiner/ItemDetailConteiner';
 
 function App() {
 
@@ -18,6 +20,7 @@ function App() {
     })
   },[])
 
+ 
 
   return (
     <div className="App">
@@ -37,6 +40,9 @@ function App() {
        img="./imagenes/celular2.jpg"/>  */}
 
        <ItemList productos={productos} />
+       
+       <ItemDetailConteiner />
+     
     </div>
   );
 }

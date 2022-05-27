@@ -48,4 +48,10 @@ export const listaProductos = ()=> {
     
 }
 
-
+export const productoId = (id) => {
+    return new Promise(respuesta => {
+        setTimeout(() => {
+            respuesta(productos.find(prod => prod.id === id))
+        }, 1000);
+    })
+}
