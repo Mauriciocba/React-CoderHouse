@@ -27,14 +27,14 @@ function App() {
         titulo= 'CoderHouse'
         subtitulo='E-Commerse' />
       </header>
-      <ContadorProductos
+      {/* <ContadorProductos
       titulo="Samsung 11"
       precio={60000}
        img="./imagenes/celular1.jpg"/>
       <ContadorProductos
       titulo="Samsung 10"
       precio={50000}
-       img="./imagenes/celular2.jpg"/> 
+       img="./imagenes/celular2.jpg"/>  */}
 
        <ItemList productos={productos} />
     </div>
