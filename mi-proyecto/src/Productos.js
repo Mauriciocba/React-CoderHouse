@@ -36,7 +36,15 @@ precio: 55000,
 categoria: 'celular', 
 img:'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcT5FoweEZcFCEnwTg9Kwr75JAgYKENPf8RkQvCVA6US6Y5LdGqCveavGW9PY7xLVHNQfPcIFooftxDJLRu5-dovT0MElJ35', 
 stock: 10, 
-description:'Samsung Galaxy A32 4G'} 
+description:'Samsung Galaxy A32 4G'} ,
+
+{ id: '6', 
+nombre: 'MOUSE GAMER',
+precio: 10000, 
+categoria: 'computacion', 
+img:'https://cf.shopee.com.ar/file/8305e736378cff580dcadbfd5fe2bfa6', 
+stock: 10, 
+description:'MOUSE GAMER PARA JUGAR A FULL'} 
 ]
 
 export const listaProductos = ()=> {
@@ -53,5 +61,13 @@ export const productoId = (id) => {
         setTimeout(() => {
             respuesta(productos.find(prod => prod.id === id))
         }, 1000);
+    })
+}
+
+export const productosPorCategoria = (categoriaId) => {
+    return new Promise(respuesta => {
+        setTimeout(() => {
+            respuesta(productos.filter(prod => prod.categoria === categoriaId))
+        }, 500);
     })
 }

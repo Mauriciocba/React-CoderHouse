@@ -9,39 +9,39 @@ import {useState, useEffect} from 'react'
 import {listaProductos,productoId} from '../src/Productos'
 import ItemDetail from '../src/componentes/ItemDetail/ItemDetail'
 import ItemDetailConteiner from './componentes/ItemDetailConteiner/ItemDetailConteiner';
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
 
 function App() {
 
-  const [productos, setProductos] = useState([])
+  // const [productos, setProductos] = useState([])
 
-  useEffect(() => {
-    listaProductos().then(respuesta =>{
-      setProductos(respuesta)
-    })
-  },[])
-
- 
+  // useEffect(() => {
+  //   listaProductos().then(respuesta =>{
+  //     setProductos(respuesta)
+  //   })
+  // },[])
 
   return (
     <div className="App">
       <header className="App-header">
+      </header>
+       <BrowserRouter>
        <NavBar />
        <Contenido 
         titulo= 'CoderHouse'
         subtitulo='E-Commerse' />
-      </header>
-      {/* <ContadorProductos
-      titulo="Samsung 11"
-      precio={60000}
-       img="./imagenes/celular1.jpg"/>
-      <ContadorProductos
-      titulo="Samsung 10"
-      precio={50000}
-       img="./imagenes/celular2.jpg"/>  */}
+       <Routes>
+       {/* <Route  path='/' element={<ItemList productos={productos}/>}/> */}
+       <Route path='/categoria/:categoriaId' element={<ItemList />} />
+       <Route path='/nosotros' element={<h5>Acerca de Nosotros</h5>} />
+       <Route path='/detalle/:id' element={<ItemDetailConteiner />} />
+       <Route path='*' element={<h1>PAGE NOT FOUND 404</h1>} />
+       </Routes>
+       </BrowserRouter>
 
-       <ItemList productos={productos} />
-       
-       <ItemDetailConteiner />
+        <ItemListContainer />
+      
      
     </div>
   );

@@ -1,15 +1,14 @@
 import '../estilos-css/NavBar.css'
 import CarritoComponente from './CarritoComponente'
 import CarritoImg from './CarritoImg'
+import {Link} from 'react-router-dom'
 
 function NavBar() {
     return(
         <div className="barraPrincipal">
-         <ul>
-           <li>Inicio</li>
-           <li>Productos</li>
-           <li>Contactos</li>
-         </ul>
+         <Link to='/'>INICIO</Link>
+         <Link to='productos'>PRODUCTOS</Link>
+         <Link to='nosotros'>ACERCA DE NOSOTROS</Link>
          <CarritoComponente />     
         </div>
         
