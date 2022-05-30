@@ -1,14 +1,16 @@
 import '../estilos-css/NavBar.css'
 import CarritoComponente from './CarritoComponente'
 import CarritoImg from './CarritoImg'
-import {Link} from 'react-router-dom'
+import {Link, NavLink} from 'react-router-dom'
 
 function NavBar() {
     return(
+       
         <div className="barraPrincipal">
-         <Link to='/'>INICIO</Link>
-         <Link to='productos'>PRODUCTOS</Link>
-         <Link to='nosotros'>ACERCA DE NOSOTROS</Link>
+         <Link className='nav-boton' to='/'>INICIO</Link>
+         <NavLink  className='nav-boton' to='/categoria/celulares'>CELULARES</NavLink>
+         <NavLink className='nav-boton' to='/categoria/computacion'>COMPUTACION</NavLink>
+         <Link className='nav-boton' to='nosotros'>ACERCA DE NOSOTROS</Link>
          <CarritoComponente />     
         </div>
         
@@ -16,3 +18,6 @@ function NavBar() {
 }
 
 export default NavBar
+
+
+

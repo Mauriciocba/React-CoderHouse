@@ -1,32 +1,39 @@
 body{
-    background-color:rgb(21, 21, 36) ;
-}
-
-.barraPrincipal{
-    width: 50%;
-    margin: auto;
-    padding: 10px 0;
-    display: flex;
-    background-color: rgb(66, 66, 88);
-    justify-content: space-between;
+    background: #c31432;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
 
-ul li{
-    color: rgb(255, 255, 255);
-    font-family: sans-serif;
-    margin: 0;
-    padding: 10px;
-    list-style-type: none;
+.barraPrincipal{  
+    background-color: #240b36;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    padding: 5px;
+    z-index: 999;
+    text-align: center;
+    font-family: sans-serif;   
+    margin-bottom: 50px;
+}
+
+.nav-boton{
     display: inline-block;
-    margin: 0 20px;
-    font-size: 1.2rem;
-    cursor: pointer;
+    padding: 10px 30px;
+    font-size: 20px;
+    
+    margin: 0 10px;
+    transition: .5s ease all;
+    color: white;
+    text-decoration: none;
 }
-
+.nav-boton:hover{
+    transform: translateY(18px);
+    background-color: #c31432;
+}
 .logo{
     width: 10%;
-    margin: 0 45px 0 0;
+    margin: 0 45px 00;
     border-radius: 10%;
     cursor: pointer;
 }

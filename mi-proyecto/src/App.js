@@ -13,24 +13,13 @@ import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
 
 function App() {
-
-  // const [productos, setProductos] = useState([])
-
-  // useEffect(() => {
-  //   listaProductos().then(respuesta =>{
-  //     setProductos(respuesta)
-  //   })
-  // },[])
-
   return (
     <div className="App">
       <header className="App-header">
       </header>
        <BrowserRouter>
        <NavBar />
-       <Contenido 
-        titulo= 'CoderHouse'
-        subtitulo='E-Commerse' />
+       {/* <Contenido /> */}
        <Routes>
        <Route  path='/' element={<ItemListContainer />}/>
        <Route path='/categoria/:categoriaId' element={<ItemListContainer />} />

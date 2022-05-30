@@ -68,7 +68,7 @@ export const listaProductos = ()=> {
     return new Promise((respuesta) => {
         setTimeout(() => {
             respuesta(productos)
-        }, 1000);
+        }, 2000);
     })
     
 }
@@ -77,7 +77,7 @@ export const productoId = (id) => {
     return new Promise(respuesta => {
         setTimeout(() => {
             respuesta(productos.find(prod => prod.id === id))
-        }, 1000);
+        }, 2000);
     })
 }
 
@@ -85,6 +85,6 @@ export const productosPorCategoria = (categoriaId) => {
     return new Promise(respuesta => {
         setTimeout(() => {
             respuesta(productos.filter(prod => prod.categoria === categoriaId))
-        }, 500);
+        }, 2000);
     })
 }
