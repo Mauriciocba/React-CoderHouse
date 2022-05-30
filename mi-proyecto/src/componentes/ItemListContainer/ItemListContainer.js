@@ -47,7 +47,11 @@ const ItemListContainer = () => {
 
     return(
         <div>
-            <ItemList productos={productos}/>
+            {
+                productos.length > 0
+                ? <ItemList productos={productos}/>
+                : <h2>No hay productos</h2>
+            }
         </div>
     )
 }

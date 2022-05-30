@@ -3,7 +3,7 @@ const productos = [
 nombre: 'iphone 13',
 precio: 108450,
 categoria: 'celulares',
-img:'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQf4cTGB7QuQ1LRP7ortUTFUHZL-ejotzijMDOmbLQXbxEm2YIzUYkkOskw2ODUDCLo95EYCSgWGls2EKVw0NSpjs6X2tRz',
+img:'./imagenes/iphon13.png',
 stock: 25,
 description:'Iphone 13'},
 
@@ -11,7 +11,7 @@ description:'Iphone 13'},
 nombre: 'Motorola g8', 
 precio: 30000, 
 categoria: 'celulares', 
-img:'https://i.blogs.es/fad653/moto-g8/840_560.jpg',
+img:'./imagenes/Motorolag8.png',
 stock: 16, 
 description:'motorola g8'},
 
