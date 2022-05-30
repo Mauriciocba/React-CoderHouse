@@ -32,15 +32,14 @@ function App() {
         titulo= 'CoderHouse'
         subtitulo='E-Commerse' />
        <Routes>
-       {/* <Route  path='/' element={<ItemList productos={productos}/>}/> */}
-       <Route path='/categoria/:categoriaId' element={<ItemList />} />
+       <Route  path='/' element={<ItemListContainer />}/>
+       <Route path='/categoria/:categoriaId' element={<ItemListContainer />} />
        <Route path='/nosotros' element={<h5>Acerca de Nosotros</h5>} />
        <Route path='/detalle/:id' element={<ItemDetailConteiner />} />
        <Route path='*' element={<h1>PAGE NOT FOUND 404</h1>} />
        </Routes>
        </BrowserRouter>
 
-        <ItemListContainer />
       
      
     </div>

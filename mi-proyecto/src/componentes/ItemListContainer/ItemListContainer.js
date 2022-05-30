@@ -12,13 +12,14 @@ const ItemListContainer = () => {
           listaProductos().then(respuesta => {
           setProductos(respuesta)
           })
-    }else{
+    }else
+    {
         productosPorCategoria(categoriaId).then(respuesta =>{
             setProductos(respuesta)
         })
     }
 
-    },[])
+    },[categoriaId])
 
     return(
         <div>
