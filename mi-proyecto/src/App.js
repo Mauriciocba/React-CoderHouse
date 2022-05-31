@@ -1,13 +1,5 @@
 import './App.css';
 import NavBar from './componentes/NavBar/NavBar';
-import Contenido from './componentes/Contenido';
-import ContadorProductos from './componentes/ContadorProductos';
-import CarritoComponente from './componentes/CarritoComponente/CarritoComponente';
-import ItemContador from './componentes/ItemContador';
-import ItemList from './componentes/ItemList/ItemList';
-import {useState, useEffect} from 'react'
-import {listaProductos,productoId} from '../src/Productos'
-import ItemDetail from '../src/componentes/ItemDetail/ItemDetail'
 import ItemDetailConteiner from './componentes/ItemDetailConteiner/ItemDetailConteiner';
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
@@ -29,9 +21,6 @@ function App() {
        <Route path='*' element={<PageNotFound />} />
        </Routes>
        </BrowserRouter>
-
-      
-     
     </div>
   );
 }
