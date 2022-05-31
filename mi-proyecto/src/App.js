@@ -1,8 +1,8 @@
 import './App.css';
-import NavBar from './componentes/NavBar';
+import NavBar from './componentes/NavBar/NavBar';
 import Contenido from './componentes/Contenido';
 import ContadorProductos from './componentes/ContadorProductos';
-import CarritoComponente from './componentes/CarritoComponente';
+import CarritoComponente from './componentes/CarritoComponente/CarritoComponente';
 import ItemContador from './componentes/ItemContador';
 import ItemList from './componentes/ItemList/ItemList';
 import {useState, useEffect} from 'react'
@@ -11,6 +11,8 @@ import ItemDetail from '../src/componentes/ItemDetail/ItemDetail'
 import ItemDetailConteiner from './componentes/ItemDetailConteiner/ItemDetailConteiner';
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
+import PageNotFound from './componentes/PageNotFound/PageNotFound';
+import About from './componentes/About/About';
 
 function App() {
   return (
@@ -19,13 +21,12 @@ function App() {
       </header>
        <BrowserRouter>
        <NavBar />
-       {/* <Contenido /> */}
        <Routes>
        <Route  path='/' element={<ItemListContainer />}/>
        <Route path='/categoria/:categoriaId' element={<ItemListContainer />} />
-       <Route path='/nosotros' element={<h5>Acerca de Nosotros</h5>} />
+       <Route path='/nosotros' element={<About />} />
        <Route path='/detalle/:id' element={<ItemDetailConteiner />} />
-       <Route path='*' element={<h1>PAGE NOT FOUND 404</h1>} />
+       <Route path='*' element={<PageNotFound />} />
        </Routes>
        </BrowserRouter>
 

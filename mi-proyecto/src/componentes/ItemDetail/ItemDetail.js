@@ -1,10 +1,17 @@
 import '../ItemDetail/ItemDetail.css'
-const ItemDetail =({nombre}) =>{
-    return(
-        <div className="itemDetail-container">
-            <h1>Detalle producto</h1>
-            <h5>Nombre</h5>
-            <li>{nombre}</li>
+const ItemDetail = ({ description, img, nombre, categoria }) => {
+    return (
+        <div class="container-itemDetail">
+            <div class="card-detail-categoria">
+                <div class="card__header">
+                    <img id="imagen-card" src={img} alt="card__image" className="card__image" width="600" />
+                </div>
+                <div class="card__body">
+                    <span class="tag tag-blue">{categoria}</span>
+                    <h4>{nombre}</h4>
+                    <p>{description}</p>
+                </div>
+            </div>
         </div>
     )
 }

@@ -15,7 +15,8 @@ body{
     text-align: center;
     font-family: sans-serif;   
     margin-bottom: 50px;
-}
+    opacity: 0.9;
+} 
 
 .nav-boton{
     display: inline-block;
@@ -30,10 +31,4 @@ body{
 .nav-boton:hover{
     transform: translateY(18px);
     background-color: #c31432;
-}
-.logo{
-    width: 10%;
-    margin: 0 45px 00;
-    border-radius: 10%;
-    cursor: pointer;
 }

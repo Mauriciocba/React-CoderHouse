@@ -1,6 +1,10 @@
 .contenedor-card{
     display: inline-block;
-    flex-wrap: wrap;
+    box-sizing: border-box;
+    margin: 0.5%;
+    padding: 4em;
+    vertical-align: top;
+    width: 31.9%;
 
 }
 .tarjeta {

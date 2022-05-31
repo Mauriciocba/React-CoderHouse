@@ -1,0 +1,9 @@
+.contenedor-pageNotFound{
+    min-height: 100vh;
+    background-image: url('https://wpcrumbs.com/wp-content/uploads/2013/09/404notfound.png');
+    background-size: cover ;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

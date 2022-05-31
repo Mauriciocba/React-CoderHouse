@@ -1,0 +1,17 @@
+.contenido{
+    width: 80px;
+    padding: 0.7em 1.7em;
+    font-size: 18px;
+    border-radius: 0.5em;
+    background: #240b36;
+    transition: all .3s;
+    cursor: pointer;
+    display: inline;
+}
+.imagen-carrito{
+    color: aliceblue;
+    width: 50px;
+}
+.contenido:hover{
+    border: 1px solid #c31432; }
+
