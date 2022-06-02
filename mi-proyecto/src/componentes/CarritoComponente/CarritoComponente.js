@@ -5,6 +5,7 @@ function CarritoComponente() {
     return(
         <div className="contenido">
             <AiOutlineShoppingCart className="imagen-carrito" />
+            0
         </div>
         
     )
