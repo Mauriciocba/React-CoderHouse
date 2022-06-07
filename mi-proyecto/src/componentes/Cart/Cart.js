@@ -4,7 +4,7 @@ import '../Cart/Cart.css'
 
 const Cart = ()=> {
 
-    const { cart, eliminarProducto } = useContext(CartContext)
+    const { cart, eliminarProducto, borrarTodoCarrito } = useContext(CartContext)
     
     return(
             <div>
@@ -30,6 +30,9 @@ const Cart = ()=> {
                      </div>
                     )})
                 }  
+                <div className="contenedor-btn-borrarTodos">
+                <button className="btn-borrarTodos" onClick={()=> borrarTodoCarrito()}>Eliminar Todos los productos</button>
+                </div>
                 </div>
             </div> 
     )}

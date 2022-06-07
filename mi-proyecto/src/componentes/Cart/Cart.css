@@ -133,3 +133,26 @@
 .btn:hover::before {
     transform: translateX(0);
    }
+
+.contenedor-btn-borrarTodos{
+  display: flex;
+  text-align: center;
+  justify-content: center; 
+  margin: 5px 5px 20px 5px;
+}
+
+.btn-borrarTodos{ 
+  background-color: #191919;
+  padding: 10px 30px;
+  font-size: 20px;
+  margin: 0 10px;
+  transition: .5s ease all;
+  color: rgb(252, 249, 249);
+  text-decoration: none;
+  border: none;
+  text-transform: uppercase;
+}
+
+.btn-borrarTodos:hover{
+  box-shadow: 0px 0px 30px 1px #881111;
+}
