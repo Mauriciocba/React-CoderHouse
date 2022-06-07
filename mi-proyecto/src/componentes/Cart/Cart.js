@@ -17,19 +17,19 @@ const Cart = ()=> {
                                  <img id="imagen-card-carrito" src={prod.img} alt="card__image" className="card__image" width="600" />
                              </div>
                             <div className="card__body_carrito">
-                               <span class="tag tag-blue">{prod.categoria}</span>
+                               <span className="tag tag-blue">{prod.categoria}</span>
                                  <h4>{prod.nombre}</h4>
                                  <stron>Precio ${prod.precio}</stron>
                                  <p>Subtotal ${prod.precio * prod.inicial}</p>
                                  <p>Cantidad {prod.inicial}</p>
                                 <div>
-                                <button class="btn" onClick={()=> eliminarProducto(prod.id)}>Eliminar Producto</button>
+                                <button className="btn" onClick={()=> eliminarProducto(prod.id)}>Eliminar Producto</button>
                                 </div>
                             </div>
                         </div>
                      </div>
                     )})
-                     }  
+                }  
                 </div>
             </div> 
     )}

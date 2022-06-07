@@ -6,7 +6,24 @@ export const CartContextProvider = ({ children }) => {
     const [cart, setCart] = useState([])
 
     const addItem = (agregarProducto) => {
+   
+        if (!estaEnCart(agregarProducto.id)) {
         setCart([...cart, agregarProducto])
+        }else{
+            const nuevaCart = cart.map(prod =>{
+                if(prod.id === agregarProducto.id){
+                    const nuevoProducto = {
+                        ...prod,
+                        inicial: agregarProducto.inicial
+                    }
+                    return nuevoProducto
+                }else{
+                    return prod
+                }
+            })
+            setCart(nuevaCart)
+        }
+    
     }
 
     const contadorProductosCarrito = () =>{
@@ -23,8 +40,23 @@ export const CartContextProvider = ({ children }) => {
         const nuevaCart = cart.filter(prod => prod.id !== id)
         setCart(nuevaCart)
     }
+
+
+    const estaEnCart = (id) => {
+        return cart.some(prod => prod.id === id)
+    }
+
+    const iniciarProducto = (id) => {
+        return cart.find(prod => prod.id === id)
+    }
+
+
+    const borrarTodoCarrito = () => {
+        setCart([])
+    }
+
     return(
-        <CartContext.Provider value={{ cart, addItem,contadorProductosCarrito,eliminarProducto}}>
+        <CartContext.Provider value={{ cart, addItem, contadorProductosCarrito, eliminarProducto, iniciarProducto, borrarTodoCarrito}}>
             {children}
         </CartContext.Provider>
     )
