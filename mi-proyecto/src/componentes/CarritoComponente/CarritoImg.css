@@ -15,3 +15,9 @@
 .contenido:hover{
     border: 1px solid #D4AF37; }
 
+.contador-carrito{
+    color: white;
+    font-size: 20px;
+    background: #191919;
+    text-decoration: none;
+}

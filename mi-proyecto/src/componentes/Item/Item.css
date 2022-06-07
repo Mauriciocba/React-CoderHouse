@@ -5,6 +5,7 @@
     padding: 4em;
     vertical-align: top;
     width: 31.9%;
+    color: #000000;
 
 }
 .tarjeta {
@@ -12,7 +13,7 @@
     text-align: center;
     margin-bottom: 25px;
     width: 300px;
-    height: 500px;
+    height: 350px;
     background-image: linear-gradient(163deg, #968974 0%, #838383 100%);
     border-radius: 20px;
     transition: all .3s;
@@ -71,4 +72,7 @@
 }
 .boton-detalle:hover {
     border: 1px solid rgb(56, 56, 56); }
-   
+
+.nombre-producto{
+    margin-bottom: 50px;
+}

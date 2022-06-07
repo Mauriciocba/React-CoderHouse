@@ -5,23 +5,27 @@ import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
 import PageNotFound from './componentes/PageNotFound/PageNotFound';
 import About from './componentes/About/About';
+import Cart from './componentes/Cart/Cart';
+import { CartContextProvider } from './Context/CartContext';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
       </header>
-       <BrowserRouter>
+       <CartContextProvider>
+       <BrowserRouter>    
        <NavBar />
        <Routes>
        <Route  path='/' element={<ItemListContainer />}/>
        <Route path='/categoria/:categoriaId' element={<ItemListContainer />} />
        <Route path='/nosotros' element={<About />} />
        <Route path='/detalle/:id' element={<ItemDetailConteiner />} />
-       <Route path='/cart' element={<h1>Cart</h1>} />
+       <Route path='/cart' element={<Cart />} />
        <Route path='*' element={<PageNotFound />} />
        </Routes>
        </BrowserRouter>
+       </CartContextProvider>
     </div>
   );
 }
