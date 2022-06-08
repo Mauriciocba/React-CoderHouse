@@ -30,9 +30,11 @@ const Cart = ()=> {
                      </div>
                     )})
                 }  
+              
                 <div className="contenedor-btn-borrarTodos">
-                <button className="btn-borrarTodos" onClick={()=> borrarTodoCarrito()}>Eliminar Todos los productos</button>
+                    <button className="btn-borrarTodos" onClick={()=> borrarTodoCarrito()}>Eliminar Todos los productos</button>
                 </div>
+
                 </div>
             </div> 
     )}

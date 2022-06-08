@@ -3,6 +3,7 @@ import {useContext, useState} from 'react';
 import { Link } from 'react-router-dom';
 import ItemCount from '../ItemCount/ItemCount';
 import CartContext from '../../Context/CartContext';
+import ItemDetailContainer from '../ItemDetailConteiner/ItemDetailConteiner'
 
 
 const ItemDetail = ({id,description, img, nombre,precio, categoria,stock }) => {
@@ -26,8 +27,12 @@ const ItemDetail = ({id,description, img, nombre,precio, categoria,stock }) => {
                     <h4>{nombre}</h4>
                     <p>{description}</p>
 
-                    { quantity > 0  ? <Link className='boton-itemCount' to='/cart'>Finalizar compra</Link> : 
-                    <ItemCount stock={stock} onAdd={handleOnAdd} numeroInicia={iniciarProducto(id)?.inicial}/>}
+                    { quantity > 0  ? <Link className='boton-itemCount' to='/cart'>Finalizar compra</Link>: 
+                    <ItemCount stock={stock} onAdd={handleOnAdd} numeroInicia={iniciarProducto(id)?.inicial}/> }
+                    
+                    { quantity > 0  ? <Link className='boton-itemCount' to='/'>Continuar comprando</Link>: 
+                     null }
+                   
         
                 </div>
             </div>
