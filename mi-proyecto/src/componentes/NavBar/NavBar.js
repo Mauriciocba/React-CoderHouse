@@ -3,7 +3,7 @@ import CarritoComponente from '../CarritoComponente/CarritoComponente'
 import {Link, NavLink} from 'react-router-dom'
 import { useContext } from 'react'
 import CartContext from '../../Context/CartContext'
-import Cart from '../Cart/Cart'
+
 
 function NavBar() {
     const {contadorProductosCarrito} = useContext(CartContext)

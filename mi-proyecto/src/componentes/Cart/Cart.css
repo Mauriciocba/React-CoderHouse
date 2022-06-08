@@ -106,7 +106,7 @@
     font-size: 16px;
     font-weight: 700;
     color: rgb(5, 5, 5);
-    border: 3px solid   #cb4335   ;
+    border: none ;
     cursor: pointer;
     position: relative;
     background-color: transparent;
@@ -135,24 +135,80 @@
    }
 
 .contenedor-btn-borrarTodos{
-  display: flex;
   text-align: center;
   justify-content: center; 
   margin: 5px 5px 20px 5px;
 }
-
-.btn-borrarTodos{ 
+.btn-detalleCompra{
   background-color: #191919;
   padding: 10px 30px;
   font-size: 20px;
-  margin: 0 10px;
   transition: .5s ease all;
   color: rgb(252, 249, 249);
   text-decoration: none;
   border: none;
   text-transform: uppercase;
+  font-family: sans-serif;
+}
+.btn-detalleCompra:hover{
+  box-shadow: 0px 0px 30px 1px #881111;
+}
+
+.btn-borrarTodos{ 
+  background-color: #191919;
+  height: 50px;
+  padding: 10px 30px;
+  font-size: 20px;
+  margin-top: 50px;
+  transition: .5s ease all;
+  color: rgb(252, 249, 249);
+  text-decoration: none;
+  border: none;
+  text-transform: uppercase;
+  font-family: sans-serif;
 }
 
 .btn-borrarTodos:hover{
   box-shadow: 0px 0px 30px 1px #881111;
 }
+
+.total{
+  color:white;
+  text-align: center;
+  justify-content: center;
+  text-transform: uppercase;
+  margin: 100px;
+  font-family: sans-serif;
+}
+
+.titulo-NohayProductos{
+  color:white;
+  text-align: center;
+  justify-content: center;
+  text-transform: uppercase;
+  margin: 100px;
+  font-family: sans-serif;
+}
+.contenedor-noHayProductos{
+    display: flex;
+    text-align: center;
+    justify-content: center; 
+    margin: 5px 5px 20px 5px;
+  
+}
+.btn-acomprar{
+  background-color: #191919;
+  padding: 10px 30px;
+  font-size: 20px;
+  margin-left: 44%;
+  transition: .5s ease all;
+  color: rgb(252, 249, 249);
+  text-decoration: none;
+  border: none;
+  text-transform: uppercase;
+  
+}
+.btn-acomprar:hover{
+  box-shadow: 0px 0px 30px 1px #881111;
+}
+

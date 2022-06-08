@@ -3,7 +3,7 @@ import {useContext, useState} from 'react';
 import { Link } from 'react-router-dom';
 import ItemCount from '../ItemCount/ItemCount';
 import CartContext from '../../Context/CartContext';
-import ItemDetailContainer from '../ItemDetailConteiner/ItemDetailConteiner'
+
 
 
 const ItemDetail = ({id,description, img, nombre,precio, categoria,stock }) => {
@@ -14,6 +14,7 @@ const ItemDetail = ({id,description, img, nombre,precio, categoria,stock }) => {
         setQuantity(inicial)
         
         addItem({id,nombre,precio,inicial,img,description,categoria})
+      
     }
     
     return (
@@ -33,7 +34,7 @@ const ItemDetail = ({id,description, img, nombre,precio, categoria,stock }) => {
                     { quantity > 0  ? <Link className='boton-itemCount' to='/'>Continuar comprando</Link>: 
                      null }
                    
-        
+                 
                 </div>
             </div>
         </div>
