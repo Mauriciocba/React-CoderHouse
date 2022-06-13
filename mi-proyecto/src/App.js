@@ -7,6 +7,8 @@ import PageNotFound from './componentes/PageNotFound/PageNotFound';
 import About from './componentes/About/About';
 import Cart from './componentes/Cart/Cart';
 import { CartContextProvider } from './Context/CartContext';
+import Login from './componentes/Login/Login';
+
 
 function App() {
   return (
@@ -16,6 +18,7 @@ function App() {
        <CartContextProvider>
        <BrowserRouter>    
        <NavBar />
+       
        <Routes>
        <Route  path='/' element={<ItemListContainer />}/>
        <Route path='/categoria/:categoriaId' element={<ItemListContainer />} />
@@ -25,7 +28,7 @@ function App() {
        <Route path='*' element={<PageNotFound />} />
        </Routes>
        </BrowserRouter>
-       </CartContextProvider>
+       </CartContextProvider> 
     </div>
   );
 }

@@ -4,6 +4,9 @@ import { useState, useEffect } from "react"
 import ItemList from "../ItemList/ItemList"
 import { useParams } from "react-router-dom"
 
+import { getDocs, collection, query, where } from 'firebase/firestore'
+import { basedatos } from '../../services/firebase'
+
 const ItemListContainer = () => {
     const [productos, setProductos] = useState([])
     const [ cargando , setCargando] = useState(true)
@@ -12,26 +15,41 @@ const ItemListContainer = () => {
     useEffect(() => {
         setCargando(true)
 
-      if (!categoriaId) {
-          listaProductos().then(respuesta => {
-          setProductos(respuesta)
-          }).catch(error =>{
-              console.log(error)
-          }).finally(( )=>{
-              setCargando(false)
-          })
-    }else
-    {
-        productosPorCategoria(categoriaId).then(respuesta =>{
-            setProductos(respuesta)
-        }).catch(error =>{
+        const collectionRef = categoriaId
+        ? query(collection(basedatos,'productos'), where('categoria', '==', categoriaId ))
+        :collection(basedatos,'productos')
+
+        getDocs(collectionRef).then(respuesta =>{
+            const productos = respuesta.docs.map(doc =>{
+                return {id: doc.id, ...doc.data()}
+            })
+            setProductos(productos)
+        }).catch(error => {
             console.log(error)
-        }).finally(( )=>{
+        }).finally(()=>{
             setCargando(false)
         })
-    }
-
+        
     },[categoriaId])
+    //   if (!categoriaId) {
+    //       listaProductos().then(respuesta => {
+    //       setProductos(respuesta)
+    //       }).catch(error =>{
+    //           console.log(error)
+    //       }).finally(( )=>{
+    //           setCargando(false)
+    //       })
+    // }else
+    // {
+    //     productosPorCategoria(categoriaId).then(respuesta =>{
+    //         setProductos(respuesta)
+    //     }).catch(error =>{
+    //         console.log(error)
+    //     }).finally(( )=>{
+    //         setCargando(false)
+    //     })
+    // }
+
 
     if (cargando) {
         return (
