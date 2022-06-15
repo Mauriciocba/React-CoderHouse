@@ -1,0 +1,61 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);
+
+label{
+    color: white;
+}
+
+.contenedor-form{
+    justify-content: center;
+    text-align: center;
+}
+.titulo-form{
+    text-align: center;
+    margin: 50px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 50px;
+}
+
+form {
+  position: relative;
+  width: 500px;
+  margin: 50px auto 100px auto;
+}
+
+input {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+  margin: 30px;
+  width: 470px;
+  height: 50px;
+  padding: 0px 15px 0px 15px;
+  background: transparent;
+  outline: none;
+  color: #726659;
+  border: solid 1px #b3aca7;
+  transition: all 0.3s ease-in-out;
+ 
+}
+
+input:hover {
+  color: #ffffff;
+}
+
+
+.boton-form {
+  width: 200px;
+  height: 50px;
+  color: black;
+  padding: 0;
+  margin: 50px;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+  outline:none;
+  cursor: pointer;
+  border: solid 1px #b3aca7;
+  border-top: none;
+}
+
+.boton-form:hover {
+  color: #23a01f;
+}

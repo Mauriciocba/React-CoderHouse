@@ -8,6 +8,7 @@ import About from './componentes/About/About';
 import Cart from './componentes/Cart/Cart';
 import { CartContextProvider } from './Context/CartContext';
 import Login from './componentes/Login/Login';
+import Formulario from './componentes/Formulario/Formulario';
 
 
 function App() {
@@ -18,11 +19,12 @@ function App() {
        <CartContextProvider>
        <BrowserRouter>    
        <NavBar />
-       <Login />
+       
        <Routes>
        <Route  path='/' element={<ItemListContainer />}/>
        <Route path='/categoria/:categoriaId' element={<ItemListContainer />} />
        <Route path='/nosotros' element={<About />} />
+       <Route path='/formulario' element={<Formulario />} />
        <Route path='/detalle/:id' element={<ItemDetailConteiner />} />
        <Route path='/cart' element={<Cart />} />
        <Route path='*' element={<PageNotFound />} />
