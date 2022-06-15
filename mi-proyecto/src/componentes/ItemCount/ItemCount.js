@@ -1,5 +1,6 @@
 import '../ItemCount/ItemCount.css'
 import {useState} from 'react';
+import swal from 'sweetalert'
 
 
 function ItemCount({stock, numeroInicia = 1 , onAdd}) {
@@ -19,6 +20,9 @@ function ItemCount({stock, numeroInicia = 1 , onAdd}) {
 
     const AgregarAlCarrito = ()=>{
         onAdd(inicial)
+        if(stock <= 0){
+            swal("Disculpe", `No hay stock disponible`, "error");
+        }
     }
 
     return(
