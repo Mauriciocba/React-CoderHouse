@@ -5,19 +5,24 @@ import {useContext ,useState, useEffect } from 'react'
 import swal from 'sweetalert'
 
 
+
 import CartContext from "../../Context/CartContext"
 import {addDoc, collection, getDocs,query,where,documentId,writeBatch} from 'firebase/firestore'
 import {basedatos} from '../../../src/services/firebase/index'
 
 
-const Formulario = () =>{
+const Formulario = () => {
     const { cart, borrarTodoCarrito} = useContext(CartContext)
+
     const [ cargando , setCargando] = useState(false)
+
     const [nombre , setNombre] =useState()
     const [telefono , setTelefono] =useState()
     const [mail , setMail] =useState()
 
     const [totalApagar, setTotal] = useState(0)
+       
+      
     
     useEffect(() => {
         calcularTotal2()
@@ -45,16 +50,13 @@ const Formulario = () =>{
               total : totalApagar  
         }
         console.log(ordenObjeto)
-        // const collectionRef = collection(basedatos,'ordenes')
-        // addDoc(collectionRef, ordenObjeto).then(({id})=>{
-        //     console.log(`se creo la orden con el id ${id}`)
-        // })
-
+        
         const ids= cart.map(prod => prod.id)
 
         console.log(ids)
 
         const batch = writeBatch(basedatos)
+       
         const noHayStock = []
 
         const collectionRef = collection(basedatos,'productos')
@@ -82,12 +84,14 @@ const Formulario = () =>{
             }
         }).then(({ id })=>{
             console.log(`el id de la orden es ${id}`)
-            swal("Compra finalizada!", `el id de su orden es ${id}`, "success");
+            swal("Compra finalizada!", `El id de su orden es ${id}`, "success");
             batch.commit()
             reset()
             borrarTodoCarrito()
          }).catch(error => {
             console.log(`no hay stock disponible `)
+            swal("Disculpe", `No hay stock disponible`, "error");
+            borrarTodoCarrito()
          }).finally(( )=>{
             setCargando(false)
         })
@@ -113,8 +117,8 @@ const Formulario = () =>{
             </div>)
     }
     
-    return(
-    <div>
+    return(    
+        <div>
         <h2 className='titulo-form'>Formulario De Compra</h2>
         <div className='contenedor-form'>
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -146,12 +150,12 @@ const Formulario = () =>{
                 onChange={(e => setTelefono(e.target.value))} />
             </div>
             <button onClick={crearOrden} className="btn-detalleCompra">Crear Orden</button>
-        </form>
-        </div>
-
-
-    </div>)
+            </form>
+            </div>    
+            </div>
+        )
 }
+
 
 
 export default Formulario

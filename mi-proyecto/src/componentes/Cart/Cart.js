@@ -113,7 +113,7 @@ const Cart = ()=> {
                 <div className="contenedor-btn-borrarTodos">
                     <div>
                      <h1 className="total">Total: ${totalApagar}</h1>
-                     <Link className="btn-acomprar" to='/formulario'>Pagar </Link>
+                     <Link className="btn-borrarTodos" to='/formulario'>Pagar </Link>
                      
                      {/* <button onClick={crearOrden} className="btn-detalleCompra">Crear Orden</button> */}
                     </div>

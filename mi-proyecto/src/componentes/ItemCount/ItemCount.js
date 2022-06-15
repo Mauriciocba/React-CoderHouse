@@ -23,7 +23,7 @@ function ItemCount({stock, numeroInicia = 1 , onAdd}) {
 
     return(
         <div>
-            <strong>Disponibles {stock - inicial} </strong>
+            <strong>Disponibles {stock-inicial} </strong>
             <div>
             <button className='boton-itemCount' onClick={decrementa}> - </button>
             <strong>  {inicial} </strong>
