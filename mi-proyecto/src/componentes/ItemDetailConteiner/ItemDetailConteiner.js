@@ -1,6 +1,5 @@
 import '../ItemDetailConteiner/ItemDetailConteiner.css'
 import { useState, useEffect } from "react";
-import { productoId } from "../../Productos";
 import ItemDetail from '../ItemDetail/ItemDetail'
 import { useParams } from "react-router-dom";
 import { getDoc,doc } from 'firebase/firestore';
@@ -24,13 +23,6 @@ const ItemDetailConteiner = () => {
          })
          
         },[])
-        // productoId(id).then(respuesta =>{
-        //     setProducto(respuesta)
-        // }).catch(error =>{
-        //     console.log(error)
-        // }).finally(( )=>{
-        //     setCargando(false)
-        // })
 
     if (cargando) {
         return (

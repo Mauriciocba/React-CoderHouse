@@ -2,8 +2,6 @@ import { useContext,useState,useEffect } from "react"
 import CartContext from "../../Context/CartContext"
 import '../Cart/Cart.css'
 import { Link } from "react-router-dom"
-import {addDoc, collection, getDocs,query,where,documentId,writeBatch} from 'firebase/firestore'
-import {basedatos} from '../../../src/services/firebase/index'
 
 const Cart = ()=> {
     
@@ -23,67 +21,7 @@ const Cart = ()=> {
         })
         setTotal(total)
     } 
-    
-    // const crearOrden=()=> {
-    //     console.log('se creo orden')
-    //     const ordenObjeto = {
-    //         comprador:{
-    //             nombre: '',
-    //             email : '',
-    //             telefono: ''
-    //         }, 
-    //           producto : cart,
-    //           total : totalApagar  
-    //     }
-    //     console.log(ordenObjeto)
-    //     // const collectionRef = collection(basedatos,'ordenes')
-    //     // addDoc(collectionRef, ordenObjeto).then(({id})=>{
-    //     //     console.log(`se creo la orden con el id ${id}`)
-    //     // })
-
-    //     const ids= cart.map(prod => prod.id)
-
-    //     console.log(ids)
-
-    //     const batch = writeBatch(basedatos)
-    //     const noHayStock = []
-
-    //     const collectionRef = collection(basedatos,'productos')
-
-    //     getDocs(query(collectionRef,where(documentId(), 'in',ids)))
-    //     .then(respuesta => {
-    //             respuesta.docs.forEach(doc => {
-    //             const dataDoc = doc.data()
-    //             const productosCantidad = cart.find(prod => prod.id === doc.id)?.inicial
-
-    //             if(dataDoc.stock >=  productosCantidad){
-    //                 batch.update(doc.ref, {stock: dataDoc.stock - productosCantidad})
-    //             }else{
-    //                 noHayStock.push({id: doc.id, ...dataDoc})
-    //             }
-    //         })
-    //     }).then(() => {
-    //         if(noHayStock.length === 0 ){
-    //             const collectionRef = collection(basedatos, 'ordenes')
-    //             return addDoc(collectionRef,ordenObjeto)
-    //         }
-    //         else 
-    //         {
-    //             return Promise.reject({type: 'no_hay_stock' , productos: noHayStock})
-    //         }
-    //     }).then(({ id })=>{
-    //         console.log(`el id de la orden es ${id}`)
-    //         batch.commit()
-    //      }).catch(error => {
-    //         console.log(`no hay stock disponible ${error}`)
-    //      })
-
-    // }
-    
-    
-    
-
-    
+        
     return(
             <div>
                 <div>
@@ -113,13 +51,12 @@ const Cart = ()=> {
                 <div className="contenedor-btn-borrarTodos">
                     <div>
                      <h1 className="total">Total: ${totalApagar}</h1>
-                     <Link className="btn-borrarTodos" to='/formulario'>Pagar </Link>
-                     
-                     {/* <button onClick={crearOrden} className="btn-detalleCompra">Crear Orden</button> */}
+                     <Link className="btn-borrarTodos" to='/formulario'>Pagar </Link>                     
                     </div>
                     <button className="btn-borrarTodos" onClick={()=> borrarTodoCarrito()}>Eliminar Todos los productos</button>
                 </div>
-                : <div className=".contenedor-noHayProductos">
+                :
+                 <div className=".contenedor-noHayProductos">
                     <h1 className="titulo-NohayProductos">No hay productos ... </h1>
                      <Link className="btn-acomprar" to='/'>a comprar!</Link> 
                  </div>}

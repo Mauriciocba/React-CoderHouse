@@ -3,14 +3,11 @@ import CarritoComponente from '../CarritoComponente/CarritoComponente'
 import {Link, NavLink} from 'react-router-dom'
 import { useContext } from 'react'
 import CartContext from '../../Context/CartContext'
-import Login from '../Login/Login'
-
 
 function NavBar() {
-    const {contadorProductosCarrito , inicioSessionGoogle} = useContext(CartContext)
+    const {contadorProductosCarrito } = useContext(CartContext)
     const contadorCarrito = contadorProductosCarrito()
-
-
+    
     return(
         <div className="barraPrincipal">
          <Link className='nav-boton' to='/'>INICIO</Link>
