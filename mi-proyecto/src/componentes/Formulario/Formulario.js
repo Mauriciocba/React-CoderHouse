@@ -1,17 +1,19 @@
 import {useForm} from 'react-hook-form'
+import {useContext ,useState, useEffect } from 'react'
+import { useNavigate } from "react-router-dom"
+import {basedatos} from '../../../src/services/firebase/index'
+import {addDoc, collection, getDocs,query,where,documentId,writeBatch} from 'firebase/firestore'
 import '../Formulario/Formulario.css'
 import '../ItemDetailConteiner/ItemDetailConteiner.css'
-import {useContext ,useState, useEffect } from 'react'
+import CartContext from "../../Context/CartContext"
 import swal from 'sweetalert'
 
 
 
-import CartContext from "../../Context/CartContext"
-import {addDoc, collection, getDocs,query,where,documentId,writeBatch} from 'firebase/firestore'
-import {basedatos} from '../../../src/services/firebase/index'
 
 
 const Formulario = () => {
+    const navegacion = useNavigate()
     const { cart, borrarTodoCarrito} = useContext(CartContext)
 
     const [ cargando , setCargando] = useState(false)
@@ -88,10 +90,12 @@ const Formulario = () => {
             batch.commit()
             reset()
             borrarTodoCarrito()
+            navegacion('/')
          }).catch(error => {
             console.log(`no hay stock disponible `)
             swal("Disculpe", `No hay stock disponible`, "error");
             borrarTodoCarrito()
+            navegacion('/')
          }).finally(( )=>{
             setCargando(false)
         })

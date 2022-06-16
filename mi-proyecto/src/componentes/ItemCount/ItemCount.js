@@ -19,10 +19,12 @@ function ItemCount({stock, numeroInicia = 1 , onAdd}) {
     }
 
     const AgregarAlCarrito = ()=>{
-        onAdd(inicial)
-        if(stock <= 0){
-            swal("Disculpe", `No hay stock disponible`, "error");
-        }
+       if(stock > 0){
+           onAdd(inicial)
+       }else {
+           swal("Disculpe", `No hay stock disponible`, "error");
+       }
+       
     }
 
     return(
