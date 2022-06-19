@@ -20,7 +20,7 @@ Abra [http://localhost:3000](http://localhost:3000) para ver en su navegador.
 Use las key para acceder a la base de datos. 
 | Firebase | README |
 | ------ | ------ |
-| Key | [https://github.com/Mauriciocba/React-CoderHouse/blob/proyecto-final/mi-proyecto/.env_Firebase][PlDb] |
+| Key | [https://github.com/Mauriciocba/React-CoderHouse/blob/proyecto-final/mi-proyecto/.env_Firebase] |
 
 
 ## Componentes principales
@@ -48,7 +48,7 @@ Finalizar compra. Nos llevara al carrito de productos, donde vemos la cantidad d
 
 | Plugin | README |
 | ------ | ------ |
-| Vercel | [https://react-coder-house.vercel.app/][PlDb] |
+| Vercel | [https://react-coder-house.vercel.app/] |
 
 
 
