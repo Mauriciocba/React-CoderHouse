@@ -3,8 +3,7 @@
 Mauricio Torres. 
 
 ## Descripcion del proyecto
-Es un E-comerse Con react.
-que simula una tienda que vende celulares y accesorios para computacion.
+Es un E-comerse con React. Que simula una tienda que vende celulares y accesorios para computacion.
 
 `bash`
 - $ git clone https://github.com/Mauriciocba/React-CoderHouse.git
