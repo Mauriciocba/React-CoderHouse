@@ -41,7 +41,7 @@ Al seleccionar un producto del "inicio" , nos va a llevar al detalle del product
 Finalizar compra. Nos llevara al carrito de productos, donde vemos la cantidad del producto, el precio unitario y el subtotal. En la misma página vamos a ver el total de todos los productos que añadimos al carrito. Además vamos a ver dos botones, uno para vaciar todo el carrito de compras y otro para pagar. Ese mismo te lleva al formulario de compra, donde ingresaremos NOMBRE, MAIL Y TELEFONO. Para finalizar la compra creamos una orden que se carga en la base de datos FIREBASE. 
 
 ### Direccion web del Proyecto 
- [https://react-coder-house-plk9qipsp-mauriciocba.vercel.app](Deploy)
+ [https://react-coder-house.vercel.app/] (Deploy)
  
 ### Gif del proyecto
 
