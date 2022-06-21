@@ -31,7 +31,8 @@ const Formulario = () => {
     }
 
 
-    const crearOrden = () => {
+    const crearOrden = (e) => {
+        e.preventDefault()
         setCargando(true)
         const ordenObjeto = {
             comprador: {
@@ -72,7 +73,7 @@ const Formulario = () => {
                 }
             }).then(({ id }) => {
                 console.log(`el id de la orden es ${id}`)
-                swal("Compra finalizada!", `El id de su orden es ${id}`, "success");
+                swal("Compra finalizada!", `Numero de Orden ${id}`, "success");
                 batch.commit()
                 reset()
                 borrarTodoCarrito()
