@@ -72,7 +72,7 @@ const Formulario = () => {
                     return Promise.reject({ type: 'no_hay_stock', productos: noHayStock })
                 }
             }).then(({ id }) => {
-                swal("Compra finalizada!", `Numero de Orden ${id}`, "success");
+                swal(`Gracias por la compra ${nombre}`, `Numero de Orden ${id}`, "success");
                 batch.commit()
                 reset()
                 borrarTodoCarrito()
