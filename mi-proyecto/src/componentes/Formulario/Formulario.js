@@ -72,14 +72,13 @@ const Formulario = () => {
                     return Promise.reject({ type: 'no_hay_stock', productos: noHayStock })
                 }
             }).then(({ id }) => {
-                console.log(`el id de la orden es ${id}`)
                 swal("Compra finalizada!", `Numero de Orden ${id}`, "success");
                 batch.commit()
                 reset()
                 borrarTodoCarrito()
                 navegacion('/')
             }).catch(error => {
-                swal("Disculpe", `Debe llenar todos los campos si desea comprar`, "error");
+                swal("Disculpe", `No hay stock disponible`, "error");
                 borrarTodoCarrito()
                 navegacion('/')
             }).finally(() => {
