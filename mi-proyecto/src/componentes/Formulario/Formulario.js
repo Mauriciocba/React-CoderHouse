@@ -13,6 +13,7 @@ const Formulario = () => {
     const { cart, borrarTodoCarrito } = useContext(CartContext)
     const [cargando, setCargando] = useState(false)
     const [nombre, setNombre] = useState()
+    const [apellido, setApellido] = useState()
     const [telefono, setTelefono] = useState()
     const [mail, setMail] = useState()
     const [totalApagar, setTotal] = useState(0)
@@ -30,13 +31,13 @@ const Formulario = () => {
         setTotal(total)
     }
 
-
     const crearOrden = (e) => {
         e.preventDefault()
         setCargando(true)
         const ordenObjeto = {
             comprador: {
                 nombre: nombre,
+                apellido: apellido,
                 email: mail,
                 telefono: telefono
             },
@@ -120,6 +121,16 @@ const Formulario = () => {
                             placeholder='Nombre'
                             {...register('nombre', { required: true, maxLength: 20 })}
                             onChange={(e => setNombre(e.target.value))} 
+                            />
+                    </div>
+                    <div>
+                        <label>Apellido</label>
+                        <input
+                            type="text"
+                            name="apellido"
+                            placeholder='Apellido'
+                            {...register('apellido', { required: true, maxLength: 20 })}
+                            onChange={(e => setApellido(e.target.value))} 
                             />
                     </div>
                     <div>
