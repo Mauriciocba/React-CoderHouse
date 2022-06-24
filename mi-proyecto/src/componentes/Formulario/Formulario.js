@@ -79,7 +79,7 @@ const Formulario = () => {
                 borrarTodoCarrito()
                 navegacion('/')
             }).catch(error => {
-                swal("Disculpe", `No hay stock disponible`, "error");
+                swal("Disculpe", `Debe llenar todos los campos si desea comprar`, "error");
                 borrarTodoCarrito()
                 navegacion('/')
             }).finally(() => {
